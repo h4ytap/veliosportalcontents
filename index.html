@@ -4,18 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Startpagina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/h4ytap/veliosportalcontents/64e0a2bf55cc1c8149d51e8733eccc74e331a2fa/Group%20389.svg">
   <style>
     body {
       margin: 0;
-      background-image: url("https://github.com/h4ytap/vlios/blob/main/bg%20def.png?raw=true");
+      background-image: url("data:image/svg+xml,%3Csvg width='1920' height='1080' viewBox='0 0 1920 1080' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_253_288)'%3E%3Crect width='1920' height='1080' transform='matrix(-1 0 0 -1 1920 1080)' fill='black'/%3E%3Crect x='1920' y='1080' width='1920' height='1080' transform='rotate(180 1920 1080)' fill='url(%23paint0_linear_253_288)'/%3E%3Cpath d='M-311 1125.41L241.008 1125.41C241.302 1125.08 241.596 1124.75 241.891 1124.41H240.992C348.926 653.429 838.552 231.44 1262.85 191.402C1263.28 191.077 1263.5 190.914 1263.5 190.914C862.992 -328.586 -311 533.414 -311 1125.41Z' fill='url(%23paint1_linear_253_288)'/%3E%3Cpath d='M1793.96 492.604C1514.54 485.005 1117.55 633.704 786.464 1099.93C785.5 1101.28 773 1119.11 773 1119.11H221C386 399.113 1443 -206.387 1795 492.113C1795 492.113 1794.65 492.278 1793.96 492.604Z' fill='url(%23paint2_linear_253_288)'/%3E%3Cpath d='M750 1102.78H1362C1592 852.284 1845 811.784 1938 811.784V502.784C1668.5 417.284 1157 515.784 750 1102.78Z' fill='url(%23paint3_linear_253_288)'/%3E%3Cpath d='M1920 1080H1344C1574 829.5 1827 789 1920 789V1080Z' fill='url(%23paint4_linear_253_288)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_253_288' x1='1983.5' y1='1080' x2='3993.85' y2='2345.71' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%238CB1FF'/%3E%3Cstop offset='1' stop-color='%23E4E7FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_253_288' x1='699.492' y1='885.414' x2='256.759' y2='298.937' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.308469' stop-color='%232500B8'/%3E%3Cstop offset='1' stop-color='%231C64FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear_253_288' x1='1296.17' y1='851.774' x2='859.326' y2='397.241' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.34746' stop-color='%232500B8'/%3E%3Cstop offset='1' stop-color='%231C64FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear_253_288' x1='1561.5' y1='923.784' x2='1374.5' y2='603' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.41' stop-color='%232500B8'/%3E%3Cstop offset='1' stop-color='%231C64FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint4_linear_253_288' x1='1632' y1='836' x2='1807' y2='1107' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%231C64FF'/%3E%3Cstop offset='1' stop-color='%232500B8'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_253_288'%3E%3Crect width='1920' height='1080' fill='white' transform='matrix(-1 0 0 -1 1920 1080)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
       background-size: cover;
-      background-repeat: no-repeat;
+      background-repeat: mirror;
       background-position: center;
       font-family: sans-serif;
       height: 100%;
       min-height: 100vh;
     }
+
+.container {
+      width: 1200px;
+      align-items: center;
+      margin: 100px auto 0;
+      text-align: center;
+      padding-bottom: 200px;
+    }
+    /* Zoekbalk */
+    form {
+      display: flex;
+      justify-content: center;
+      width: 1200px;
+      margin: 0 auto;
+    }
+    .search-box {
+      color: #333333;
+      width: 900px;
+      height: 60px;
+      border-radius: 40px;
+      padding: 0 24px;
+      font-size: 24px;
+      font-weight: 600
+      font-family: 'Red Hat Display', sans-serif;
+      outline: none;
+      background-color: rgba(255, 255, 255);
+      border: none;
+      transition: background-color 0.3s;
+    }
+    .search-box:hover:not(:focus) {
+      background-color: #D2D9E3;
+    }
+    .search-box::placeholder {
+      color: #1A5FF4;
+      transition: color 0.3s;
+      font-weight: 600;
+      font-family: 'Red Hat Display', sans-serif;
+
+    }
+    /* GRID met snelkoppelingen (ongewijzigd) */
+    .grid {
+      align-items: center;
+      width: 1000px;
+      margin: 24px auto 60px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      background-size: cover;
+    }
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+    .grid-icon {
+      width: 80px;
+      height: 80px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 25px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .grid-icon:hover {
+      transform: scale(1.2);
+      filter: brightness(0.8);
+    }
+    .grid-label {
+      color: #ffffff;
+      margin-top: 8px;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 14px;
+    }
+
 
     header {
       background-color: white;
@@ -142,6 +218,74 @@
       <button class="nav-button btn5" onclick="location.href='pagina5.html'"></button>
     </div>
   </header>
+
+<div class="container">
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+      <input type="text" name="q" class="search-box" placeholder="Zoeken..." autocomplete="off" spellcheck="false" />
+    </form>
+    <div class="grid">
+      <a href="https://murmellius.magister.net/magister/#/" class="grid-item">
+        <div class="grid-icon" data-icon="magister"></div>
+        <div class="grid-label">Magister</div>
+      </a>
+      <a href="https://murmellius.zportal.nl/?sso=true" class="grid-item">
+        <div class="grid-icon" data-icon="zermelo"></div>
+        <div class="grid-label">Zermelo</div>
+      </a>
+      <a href="https://murmellius.magister.net/magister/#/leermiddelen" class="grid-item">
+        <div class="grid-icon" data-icon="leermiddelen"></div>
+        <div class="grid-label">Leermiddelen</div>
+      </a>
+      <a href="https://murmellius.magister.net/magister/#/cijfers" class="grid-item">
+        <div class="grid-icon" data-icon="cijfers"></div>
+        <div class="grid-label">Cijfers</div>
+      </a>
+      <a href="https://murmellius.magister.net/magister/#/afwezigheid" class="grid-item">
+        <div class="grid-icon" data-icon="afwezigheid"></div>
+        <div class="grid-label">Afwezigheid</div>
+      </a>
+      <a href="https://www.microsoft365.com/apps" class="grid-item">
+        <div class="grid-icon" data-icon="microsoft365"></div>
+        <div class="grid-label">Microsoft 365</div>
+      </a>
+      <a href="https://outlook.office.com/mail/" class="grid-item">
+        <div class="grid-icon" data-icon="outlook"></div>
+        <div class="grid-label">Outlook</div>
+      </a>
+      <a href="https://www.youtube.com/" class="grid-item">
+        <div class="grid-icon" data-icon="youtube"></div>
+        <div class="grid-label">YouTube</div>
+      </a>
+      <a href="https://chatgpt.com/" class="grid-item">
+        <div class="grid-icon" data-icon="chatgpt"></div>
+        <div class="grid-label">ChatGPT</div>
+      </a>
+      <a href="https://www.murmellius.nl/" class="grid-item">
+        <div class="grid-icon" data-icon="murmellius"></div>
+        <div class="grid-label">Murmellius</div>
+      </a>
+      <a href="https://www.tiktok.com/" class="grid-item">
+        <div class="grid-icon" data-icon="tiktok"></div>
+        <div class="grid-label">TikTok</div>
+      </a>
+      <a href="https://studygo.com/nl/learn/recent" class="grid-item">
+        <div class="grid-icon" data-icon="wrts"></div>
+        <div class="grid-label">WRTS</div>
+      </a>
+      <a href="https://quizlet.com/latest" class="grid-item">
+        <div class="grid-icon" data-icon="quizlet"></div>
+        <div class="grid-label">Quizlet</div>
+      </a>
+      <a href="https://www.bandlab.com/feed/trending" class="grid-item">
+        <div class="grid-icon" data-icon="bandlab"></div>
+        <div class="grid-label">BandLab</div>
+      </a>
+      <a href="https://open.spotify.com/" class="grid-item">
+        <div class="grid-icon" data-icon="spotify"></div>
+        <div class="grid-label">Spotify</div>
+      </a>
+    </div>
+  </div>
 
   <!-- Overlay 1 -->
   <div id="overlay1" class="overlay">
