@@ -9,6 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/h4ytap/veliosportalcontents/a51c011d0f5a145a01f9ea44e78a730368e4c7aa/Group%20491Chrome.svg">
   <style>
+      #top-banner {
+      background-color: #0009FF;
+      color: #FFF;
+      padding: 10px 20px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1001;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    #top-banner button {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -168,6 +191,11 @@
   </style>
 </head>
 <body>
+     <div id="top-banner">
+    Door een fout in onze server kan er soms geen verbinding gemaakt worden met Quizlet. Ons excuses voor het ongemak.
+    <button onclick="document.getElementById('top-banner').style.display='none'">×</button>
+  </div>
+
   <div class="container">
     <div class="title">CTP 4</div>
     <div class="weekdays">
