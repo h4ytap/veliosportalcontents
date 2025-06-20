@@ -273,7 +273,7 @@ if (imageSrc) content.style.backgroundImage = `url(${imageSrc})`;
       const btns = document.createElement('div'); btns.className = 'modal-buttons';
       const b1 = document.createElement('button'); b1.className = 'btn-quizlet'; b1.textContent = 'Quizlet';
       b1.addEventListener('click', e => { e.stopPropagation();
-        info.quizlet==='true'?window.open(info.quizletLink,'_blank'):showNotification(`Sorry, je kunt niet leren voor ${info.title} met Quizlet`);
+        info.quizlet==='true'?window.open(info.quizletLink,'_blank'):showNotification(`Sorry, je kunt (nog) niet leren voor ${info.title} met Quizlet`);
       });
       const b2 = document.createElement('button'); b2.className = 'btn-files'; b2.textContent = 'Hulpmiddelen';
       b2.addEventListener('click', e => { e.stopPropagation();
